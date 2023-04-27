@@ -1,8 +1,9 @@
-from Selenium.FinalSelenium import *
+from FinalSelenium import *
 
 
 class TestXYZBank:
     def test_sanity(self):
+        driver = webdriver.Safari()
         open_site(driver,url)
         driver.maximize_window()
         expected = url
@@ -12,6 +13,7 @@ class TestXYZBank:
         time.sleep(1)
 
     def test_Costumer_Count(self):
+        driver = webdriver.Safari()
         open_site(driver,url)
         driver.maximize_window()
         time.sleep(1)
@@ -26,6 +28,8 @@ class TestXYZBank:
         assert expected == actual
 
     def test_3Deposit(self):
+        driver = webdriver.Safari()
+
         open_site(driver, url)
         driver.maximize_window()
         time.sleep(1)
@@ -56,6 +60,8 @@ class TestXYZBank:
         assert expected == actual
 
     def test_HarryPoter_Account1(self):
+        driver = webdriver.Safari()
+
         open_site(driver, url)
         driver.maximize_window()
         time.sleep(1)
@@ -85,6 +91,8 @@ class TestXYZBank:
         assert expected == actual
 
     def test_AddNew_Costumer(self):
+        driver = webdriver.Safari()
+
         open_site(driver, url)
         driver.maximize_window()
         time.sleep(1)
@@ -109,16 +117,3 @@ class TestXYZBank:
         actual = len(Customers2)
         driver.close()
         assert expected == actual
-
-
-
-
-
-
-
-
-
-
-
-
-
